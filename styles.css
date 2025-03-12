@@ -1,0 +1,577 @@
+/*==============FONTS==================*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/*==============RESETS==================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    
+/*=================VARIABLES===================*/
+:root {
+    --navy-blue: #242943;
+    --navy-blue-lt: hsl(231, 28%, 23%);
+    --white: #ffffff;
+    --gray: hsl(227, 20%, 33%);
+    --light-blue: hsl(196, 100%, 74%);
+    --lilac: hsl(251, 76%, 79%);
+    --peach: hsl(5, 100%, 80%);
+    --orange: hsl(29, 84%, 78%);
+    --blue-purple: hsl(223, 80%, 78%);
+    --green: hsl(150, 45%, 71%);
+}
+
+/*=================TEXT===================*/
+body {
+    font-family: "Source Sans 3";
+    color: var(--white);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+#explore h2{
+    font-size: 2.2em;
+}
+
+
+a {
+    color: var(--white);
+    text-underline-offset: 3.3px;
+    text-decoration-style: dotted;
+}
+
+a:not(cite a) {
+    text-decoration: none;
+}
+
+a:not(#explore a):hover {
+    color: var(--light-blue);
+}
+
+ul {
+    list-style: none;
+}
+
+header p, #explore p, #legal-cite {
+    font-size: .74em;
+    font-weight: 640;
+}
+
+header p, #explore p {
+    text-transform: uppercase;
+    letter-spacing: .16em;
+}
+
+.button, input, label {
+    font-size: .95em;
+    font-weight: 650;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+input {
+    font-size: .8em;
+}
+
+#content p, address {
+    font-style: normal;
+    font-weight: 320;
+}
+
+#content p {
+    line-height: 1.6em;
+}
+
+dt {
+    font-size: 1.3em;
+    font-weight: 550;
+    font-style: normal;
+}
+
+small {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+cite {
+    font-size: 1.1em;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.hidden-text {
+    display: none;
+}
+
+/*=================LAYOUT===================*/
+header, main > *{
+    padding: 0 5vw;
+}
+
+body {
+    background-color: var(--navy-blue-lt);
+}
+
+header {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background-image: url(images/banner.jpg);
+}
+
+header p {
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+
+/*=================EXPLORE===================*/
+
+#explore {
+    background-color: var(--green);
+}
+
+#content {
+    margin-top: 50px;
+}
+
+footer {
+    background-color: var(--navy-blue);
+}
+
+#explore {
+    padding: 0;
+}
+
+#explore li {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    padding-left: 5vw;
+    aspect-ratio: 1 / 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#explore li:first-of-type {
+    background-image: url(images/pic01.jpg);
+}
+
+#explore li:first-of-type::before {
+    background-color: var(--light-blue);
+}
+
+#explore li:nth-of-type(2) {
+    background-image: url(images/pic02.jpg);
+}
+
+#explore li:nth-of-type(2)::before {
+    background-color: var(--lilac);
+}
+
+#explore li:nth-of-type(3) {
+    background-image: url(images/pic03.jpg);
+}
+
+#explore li:nth-of-type(3)::before {
+    background-color: var(--peach);
+}
+
+#explore li:nth-of-type(4) {
+    background-image: url(images/pic04.jpg);
+}
+
+#explore li:nth-of-type(4)::before {
+    background-color: var(--orange);
+}
+
+#explore li:nth-of-type(5) {
+    background-image: url(images/pic05.jpg);
+}
+
+#explore li:nth-of-type(5)::before {
+    background-color: var(--blue-purple);
+}
+
+#explore li:nth-of-type(6) {
+    background-image: url(images/pic06.jpg);
+}
+
+#explore li:nth-of-type(6)::before {
+    background-color: var(--green);
+}
+
+#explore a, #explore .bar {
+    z-index: 2;
+}
+
+#explore li::before {
+    content: "";
+    position: absolute;
+    opacity: 60%;
+    inset: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 1;
+}
+
+
+#explore li:hover::before {
+    opacity: 0;
+}
+/*=================NAV===================*/
+
+/*=================GRAPHIC ELEMENTS===================*/
+.bar {
+    background-color: var(--white);
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#explore .bar {
+    width: 110%;
+}
+
+.button, input[type='reset'], input[type='submit'] {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--white);
+    width: fit-content;
+    padding: 10px 20px;
+
+}
+
+#content .button {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+
+/*=================IMAGES===================*/
+/*==============FOOTER===============*/
+
+footer {
+    padding: 0;
+}
+
+form {
+    padding: 50px 5vw 0 5vw;
+    border-bottom: 2px solid var(--navy-blue-lt);
+}
+
+label, input {
+    display: block;
+}
+
+label {
+    margin-bottom: 15px;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+#name, #email {
+    height: 40px;
+}
+
+#message {
+    height: 200px;
+}
+
+input:not(input[type='submit']):not(input[type='reset']) {
+    background-color: var(--navy-blue-lt);
+    border: none;
+    width: 100%;
+}
+
+input[type="reset"], input[type='submit'] {
+    display: inline-block;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin-bottom: 50px;
+}
+
+input[type='submit'] {
+    color: var(--navy-blue);
+    background-color: var(--white);
+    margin-right: 10px;
+}
+
+input[type="reset" i] {
+    color:#ffffff;
+    background-color: var(--navy-blue);
+}
+
+dl, #social-media, #legal-cite {
+    padding: 0 5vw;
+}
+
+dl {
+    padding-top: 25px;
+    border-bottom: 2px solid var(--navy-blue-lt);
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    grid-template-rows: repeat(9, auto);
+    align-items: center;
+    grid-gap: 10px;
+}
+
+dl svg {
+    grid-column: 1 / 3;
+}
+
+dt {
+    grid-column: 2 / 3;
+}
+
+dt svg {
+    margin-right: 15px;
+}
+
+dd {
+    grid-column: 2 / 3;
+    position: relative;
+}
+
+dt:nth-of-type(1) {
+    grid-row: 1 / 2;
+}
+
+dl svg:nth-of-type(1) {
+    grid-row: 1 / 2;
+}
+
+dt:nth-of-type(2) {
+    grid-row: 3 / 4;
+}
+
+dl svg:nth-of-type(2) {
+    grid-row: 3 / 4;
+}
+
+dt:nth-of-type(3) {
+    grid-row: 5 / 6;
+}
+
+dl svg:nth-of-type(3) {
+    grid-row: 5 / 6;
+}
+
+#social-media {
+    margin-top: 30px;
+    display: flex;
+}
+
+#social-media li {
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+small, cite span {
+    display: block;
+    color: var(--gray);
+}
+
+cite a {
+    color: var(--gray);
+}
+
+#legal-cite {
+    line-height: 1.8em;
+    padding-bottom: 20px;
+}
+
+
+
+
+
+/*=====--------=====--------TABLET LANDSCAPE MEDIA QUERY------------======------------====*/
+
+@media (min-width: 600px) and (orientation: portrait) {
+    #explore ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    #explore li:nth-of-type(1) {
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+
+    #explore li:nth-of-type(2) {
+        grid-column: 2 / 3;
+        grid-row: 1;
+    }
+
+    #explore li:nth-of-type(3) {
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+
+    #explore li:nth-of-type(4) {
+        grid-column: 2 / 3;
+        grid-row: 2;
+    }
+    #explore li:nth-of-type(5) {
+        grid-column: 1 / 2;
+        grid-row: 3;
+    }
+
+    #explore li:nth-of-type(6) {
+        grid-column: 2 / 3;
+        grid-row: 3;
+    }
+
+    #explore li {
+        width: 50vw;
+    }
+
+
+}
+
+/*=====--------=====--------TABLET LANDSCAPE/DESKTOP MEDIA QUERY------------======------------====*/
+
+@media (min-width: 600px) {
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        #explore h2, h2{
+            font-size: 1.3em;
+        }
+
+        header p, #explore p, #legal-cite {
+            font-size: .6em;
+        }
+
+        .button, input, label {
+            font-size: .8em;
+        }
+
+        #explore .bar {
+            margin-top: 3px;
+            margin-bottom: 6px;
+        }
+
+        .bar {
+            height: 1.5px;
+        }
+
+        #explore ul {
+            display: grid;
+            grid-template-columns: 35vw 15vw 15vw 35vw;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        #explore li:nth-of-type(1), #explore li:nth-of-type(1)::before {
+            /*width: 35vw;*/
+            grid-column: 1 / 2;
+            grid-row: 1;
+        }
+    
+        #explore li:nth-of-type(2), #explore li:nth-of-type(2)::before {
+            /*width: 65vw;*/
+            grid-column: 2 / 5;
+            grid-row: 1;
+        }
+    
+        #explore li:nth-of-type(3), #explore li:nth-of-type(3)::before {
+            /*width: 65vw;*/
+            grid-column: 1 / 4;
+            grid-row: 2;
+        }
+    
+        #explore li:nth-of-type(4), #explore li:nth-of-type(4)::before {
+            /*width: 35vw;*/
+            grid-column: 4 / 5;
+            grid-row: 2;
+        }
+
+        #explore li:nth-of-type(5), #explore li:nth-of-type(5)::before {
+            /*width: 35vw;*/
+            grid-column: 1 / 2;
+            grid-row: 3;
+        }
+    
+        #explore li:nth-of-type(6), #explore li:nth-of-type(6)::before {
+            /*width: 65vw;*/
+            grid-column: 2 / 5;
+            grid-row: 3;
+        }
+    
+        #explore li {
+            display: flex;
+            width: 100%;
+            height: 30vw;
+            align-items: center;
+            aspect-ratio: auto;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        #explore li::before {
+            content: "";
+            position: absolute;
+            opacity: 60%;
+            transition: opacity 0.2s ease-in-out;
+            z-index: 1;
+        }
+
+        footer {
+            display: grid;
+            grid-template-columns: 65vw 35vw;
+            grid-template-rows: 1fr auto auto;
+        }
+
+        form {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        address {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            align-self: end;
+        }
+
+        #social-media {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+        }
+
+        #legal-cite {
+            grid-column: 1 / 3;
+            grid-row: 3 / 4;
+        }
+
+        dd { 
+            margin-bottom: 40%;
+        }
+
+        small, cite span {
+            display: inline;
+        }
+
+        small::after, cite span:first-of-type:after {
+            content: "|";
+            padding: 0 8px;
+        }
+}
+
+
+
+/*=====--------=====--------DESKTOP MEDIA QUERY------------======------------====*/
+
